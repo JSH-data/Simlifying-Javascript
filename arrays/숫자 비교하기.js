@@ -1,0 +1,1 @@
+function solution(num1, num2) {/n    return num1 === num2 ? 1 : -1;/n}
