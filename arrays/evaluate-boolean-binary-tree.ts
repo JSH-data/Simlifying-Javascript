@@ -13,11 +13,11 @@
  */
 
 function evaluateTree(root: TreeNode | null): boolean {
-    const dfs = (node) => {
+    const DFS = (node) => {
         if(node.left && node.right) {
-            dfs(node.left);
+            DFS(node.left);
 
-            dfs(node.right);
+            DFS(node.right);
 
             if(node.val === 3) {
                 node.val = (node.left.val && node.right.val);
@@ -29,7 +29,7 @@ function evaluateTree(root: TreeNode | null): boolean {
         }
     }
 
-    dfs(root);
+    DFS(root);
     
     return !!root.val
 };
